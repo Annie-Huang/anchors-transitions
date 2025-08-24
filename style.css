@@ -16,7 +16,8 @@ nav {
   &::after {
     content: '';
     position: absolute;
-    inset: 0;
+    /*inset: 0;*/
+    inset: auto 0 0; /* move the bar to the bottom */
     height: 10px;
     background: steelblue;
   }
