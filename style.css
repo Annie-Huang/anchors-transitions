@@ -1,3 +1,7 @@
+html {
+  interpolate-size: allow-keywords;
+}
+
 body {
   background-image: url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');
   background-attachment: fixed;
@@ -13,11 +17,45 @@ nav {
 
   position: relative;
 
+  & ul > :nth-child(1) {
+    anchor-name: --link-1;
+  }
+  & ul > :nth-child(2) {
+    anchor-name: --link-2;
+  }
+  & ul > :nth-child(3) {
+    anchor-name: --link-3;
+  }
+  & ul > :nth-child(4) {
+    anchor-name: --link-4;
+  }
+
+  &:has(ul > :nth-child(1):hover)::after {
+    position-anchor: --link-1;
+  }
+
+  &:has(ul > :nth-child(2):hover)::after {
+    position-anchor: --link-2;
+  }
+
+  &:has(ul > :nth-child(3):hover)::after {
+    position-anchor: --link-3;
+  }
+
+  &:has(ul > :nth-child(4):hover)::after {
+    position-anchor: --link-4;
+  }
+
   &::after {
     content: '';
     position: absolute;
     /*inset: 0;*/
-    inset: auto 0 0; /* move the bar to the bottom */
+    /*inset: auto 0 0; !* move the bar to the bottom *!*/
+
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+
     height: 10px;
     background: steelblue;
   }
