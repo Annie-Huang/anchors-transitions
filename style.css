@@ -58,6 +58,9 @@ nav {
 
     height: 10px;
     background: steelblue;
+
+    transition: position-anchor 10000ms; /* takes longer to transit but it will just jump at the 50% mark rather than smooth transition */
+    transition-behavior: allow-discrete; /* position-anchor is discrete transition */
   }
 
   /* Only chrome support this atm */
