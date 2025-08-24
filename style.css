@@ -48,6 +48,8 @@ nav {
   }
   */
 
+  anchor-name: --hovered-link;
+
   li:hover {
     anchor-name: --hovered-link;
   }
