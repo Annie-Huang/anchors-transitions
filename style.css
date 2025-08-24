@@ -69,6 +69,10 @@ nav {
     transition-behavior: allow-discrete; !* position-anchor is discrete transition *!*/
 
     position-anchor: --hovered-link;
+    /* !!!! since your position-anchor always on the same name, now you can have transition animation */
+    transition:
+      left 300ms,
+      right 300ms;
   }
 
   /* Only chrome support this atm */
