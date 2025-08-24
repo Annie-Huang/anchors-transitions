@@ -15,7 +15,8 @@ nav {
   padding: 8px;
   border-radius: 8px;
 
-  position: relative;
+  /* When you have a anchor-name, you cannot have a position relative, otherwise you cannot see the anchor-position style */
+  /*position: relative;*/
 
   /*
   & ul > :nth-child(1) {
