@@ -85,6 +85,14 @@ nav {
     transition: 300ms;
   }
 
+  /* When the <a> is on hover, we want it to occupy the whole <a> */
+  &:has(a:hover)::after {
+    top: anchor(top);
+    left: anchor(left);
+    right: anchor(right);
+    bottom: anchor(bottom);
+  }
+
   /* Only chrome support this atm */
   @supports (corner-shape: squircle) {
     border-radius: 24px;
