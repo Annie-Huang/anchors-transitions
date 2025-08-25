@@ -63,7 +63,7 @@ nav {
 
     left: anchor(left);
     right: anchor(right);
-    bottom: anchor(bottom);
+    bottom: calc(anchor(bottom) + 5px);
 
     height: 10px;
     background: steelblue;
@@ -73,9 +73,10 @@ nav {
 
     position-anchor: --hovered-link;
     /* !!!! since your position-anchor always on the same name, now you can have transition animation */
-    transition:
-      left 300ms,
-      right 300ms;
+    /*transition:*/
+    /*  left 300ms,*/
+    /*  right 300ms;*/
+    transition: 300ms;
   }
 
   /* Only chrome support this atm */
