@@ -61,11 +61,14 @@ nav {
     /*inset: 0;*/
     /*inset: auto 0 0; !* move the bar to the bottom *!*/
 
+    top: calc(anchor(bottom) - 10px);
     left: anchor(left);
     right: anchor(right);
     bottom: calc(anchor(bottom) + 5px);
 
-    height: 10px;
+    /* Use top and bottom value; instead of height, to give it a height value */
+    /*height: 10px;*/
+
     background: steelblue;
 
     /*    transition: position-anchor 10000ms; !* takes longer to transit but it will just jump at the 50% mark rather than smooth transition *!
