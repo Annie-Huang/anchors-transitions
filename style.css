@@ -49,6 +49,8 @@ nav {
   }
   */
 
+  isolation: isolate; /* required for the z-index: -1 for the &&::after */
+
   anchor-name: --hovered-link;
 
   li:hover {
@@ -58,6 +60,8 @@ nav {
   &::after {
     content: '';
     position: absolute;
+    z-index: -1; /* Make the blue bar go behind the <a> */
+
     /*inset: 0;*/
     /*inset: auto 0 0; !* move the bar to the bottom *!*/
 
