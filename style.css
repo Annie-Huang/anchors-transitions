@@ -62,8 +62,11 @@ nav {
     /*inset: auto 0 0; !* move the bar to the bottom *!*/
 
     top: calc(anchor(bottom) - 10px);
-    left: anchor(left);
-    right: anchor(right);
+    /*left: anchor(left);*/
+    /*right: anchor(right);*/
+    /* Make it look better by narrow it 1rem on both side.*/
+    left: calc(anchor(left) + 1rem);
+    right: calc(anchor(right) + 1rem);
     bottom: calc(anchor(bottom) + 5px);
 
     /* Use top and bottom value; instead of height, to give it a height value */
