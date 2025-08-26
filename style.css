@@ -114,14 +114,21 @@ nav {
     left: anchor(left);
     right: anchor(right);
     bottom: anchor(bottom);
+
+    /* Only chrome support this atm */
+    @supports (corner-shape: squircle) {
+      border-radius: 24px;
+      corner-shape: squircle;
+      /*corner-shape: scoop;*/
+    }
   }
 
-  /* Only chrome support this atm */
-  @supports (corner-shape: squircle) {
-    border-radius: 24px;
-    corner-shape: squircle;
-    /*corner-shape: scoop;*/
-  }
+  /*!* Only chrome support this atm *!*/
+  /*@supports (corner-shape: squircle) {*/
+  /*  border-radius: 24px;*/
+  /*  corner-shape: squircle;*/
+  /*  !*corner-shape: scoop;*!*/
+  /*}*/
 
   > ul {
     padding: 0;
