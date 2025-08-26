@@ -117,9 +117,8 @@ nav {
 
     /* Only chrome support this atm */
     @supports (corner-shape: squircle) {
-      border-radius: 24px;
       corner-shape: squircle;
-      /*corner-shape: scoop;*/
+      border-radius: 50%;
     }
   }
 
