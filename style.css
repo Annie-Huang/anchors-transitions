@@ -122,12 +122,24 @@ nav {
     }
   }
 
+  &:has(li:first-of-type a:hover)::after {
+    @supports (corner-shape: squircle) {
+      border-radius: 32px 50% 50% 32px;
+    }
+  }
+
+  &:has(li:last-of-type a:hover)::after {
+    @supports (corner-shape: squircle) {
+      border-radius: 50% 32px 32px 50%;
+    }
+  }
+
   /*!* Only chrome support this atm *!*/
-  /*@supports (corner-shape: squircle) {*/
-  /*  border-radius: 24px;*/
-  /*  corner-shape: squircle;*/
-  /*  !*corner-shape: scoop;*!*/
-  /*}*/
+  @supports (corner-shape: squircle) {
+    border-radius: 24px;
+    corner-shape: squircle;
+    /*corner-shape: scoop;*/
+  }
 
   > ul {
     padding: 0;
