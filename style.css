@@ -61,7 +61,8 @@ nav {
   &::after {
     content: '';
     position: absolute;
-    z-index: -2; /* Make the blue bar go behind the <a> */
+
+    /*z-index: -2; !* Make the blue bar go behind the <a> *!*/
 
     /*inset: 0;*/
     /*inset: auto 0 0; !* move the bar to the bottom *!*/
@@ -104,6 +105,12 @@ nav {
       );
   }
 
+  &::before {
+    z-index: -1;
+    background: rgb(0 0 0 / 0.2);
+    backdrop-filter: blur(2px);
+  }
+
   &::after {
     /*    content: '';
     position: absolute;
@@ -123,11 +130,13 @@ nav {
     /* Use top and bottom value; instead of height, to give it a height value */
     /*height: 10px;*/
 
+    z-index: -2;
+
     /*background: steelblue;*/
     /* Make the hover background look like a window */
-    /*background-image: url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');*/
-    background-image: linear-gradient(rgb(0 0 0 / 0.4) 0 0),
-      url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');
+    background-image: url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');
+    /*background-image: linear-gradient(rgb(0 0 0 / 0.4) 0 0),*/
+    /*  url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');*/
     background-attachment: fixed;
 
     /*    border-radius: 10px;
