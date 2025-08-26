@@ -86,7 +86,24 @@ nav {
     /*transition:*/
     /*  left 300ms,*/
     /*  right 300ms;*/
-    transition: 300ms;
+    /*transition: 300ms;*/
+    /* timing function getting from https://easingwizard.com/ -> Spring -> Elastic */
+    transition: 300ms
+      linear(
+        0,
+        0.029 1.6%,
+        0.123 3.5%,
+        0.651 10.6%,
+        0.862 14.1%,
+        1.002 17.7%,
+        1.046 19.6%,
+        1.074 21.6%,
+        1.087 23.9%,
+        1.086 26.6%,
+        1.014 38.5%,
+        0.994 46.3%,
+        1
+      );
   }
 
   /* When the <a> is on hover, we want it to occupy the whole <a> */

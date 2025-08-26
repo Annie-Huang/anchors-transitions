@@ -2,4 +2,9 @@ Make this fun effect that follows your cursor (pure CSS) (https://www.youtube.co
 
 https://codepen.io/kevinpowell/pen/vENZzBd
 https://github.com/Annie-Huang/anchors-transitions
+
+https://easingwizard.com/
 ------------------------------------------------------------------------------------------------------------
+
+https://easingwizard.com/
+- Choose Spring -> Elastic
