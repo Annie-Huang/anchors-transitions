@@ -78,6 +78,8 @@ nav {
 
     background: steelblue;
 
+    border-radius: 10px;
+
     /*    transition: position-anchor 10000ms; !* takes longer to transit but it will just jump at the 50% mark rather than smooth transition *!
     transition-behavior: allow-discrete; !* position-anchor is discrete transition *!*/
 
@@ -88,7 +90,7 @@ nav {
     /*  right 300ms;*/
     /*transition: 300ms;*/
     /* timing function getting from https://easingwizard.com/ -> Spring -> Elastic */
-    transition: 300ms
+    transition: 500ms
       linear(
         0,
         0.029 1.6%,
