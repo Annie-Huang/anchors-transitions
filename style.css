@@ -160,6 +160,7 @@ nav {
       );*/
   }
 
+  &:has(a:hover)::before,
   /* When the <a> is on hover, we want it to occupy the whole <a> */
   &:has(a:hover)::after {
     top: anchor(top);
@@ -174,12 +175,14 @@ nav {
     }
   }
 
+  &:has(li:first-of-type a:hover)::before,
   &:has(li:first-of-type a:hover)::after {
     @supports (corner-shape: squircle) {
       border-radius: 32px 50% 50% 32px;
     }
   }
 
+  &:has(li:last-of-type a:hover)::before,
   &:has(li:last-of-type a:hover)::after {
     @supports (corner-shape: squircle) {
       border-radius: 50% 32px 32px 50%;
