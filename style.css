@@ -57,10 +57,11 @@ nav {
     anchor-name: --hovered-link;
   }
 
+  &::before,
   &::after {
     content: '';
     position: absolute;
-    z-index: -1; /* Make the blue bar go behind the <a> */
+    z-index: -2; /* Make the blue bar go behind the <a> */
 
     /*inset: 0;*/
     /*inset: auto 0 0; !* move the bar to the bottom *!*/
@@ -72,16 +73,6 @@ nav {
     left: calc(anchor(left) + 1rem);
     right: calc(anchor(right) + 1rem);
     bottom: calc(anchor(bottom) + 5px);
-
-    /* Use top and bottom value; instead of height, to give it a height value */
-    /*height: 10px;*/
-
-    /*background: steelblue;*/
-    /* Make the hover background look like a window */
-    /*background-image: url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');*/
-    background-image: linear-gradient(rgb(0 0 0 / 0.4) 0 0),
-      url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');
-    background-attachment: fixed;
 
     border-radius: 10px;
 
@@ -111,6 +102,62 @@ nav {
         0.994 46.3%,
         1
       );
+  }
+
+  &::after {
+    /*    content: '';
+    position: absolute;
+    z-index: -1; !* Make the blue bar go behind the <a> *!
+
+    !*inset: 0;*!
+    !*inset: auto 0 0; !* move the bar to the bottom *!*!
+
+    top: calc(anchor(bottom) - 10px);
+    !*left: anchor(left);*!
+    !*right: anchor(right);*!
+    !* Make it look better by narrow it 1rem on both side.*!
+    left: calc(anchor(left) + 1rem);
+    right: calc(anchor(right) + 1rem);
+    bottom: calc(anchor(bottom) + 5px);*/
+
+    /* Use top and bottom value; instead of height, to give it a height value */
+    /*height: 10px;*/
+
+    /*background: steelblue;*/
+    /* Make the hover background look like a window */
+    /*background-image: url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');*/
+    background-image: linear-gradient(rgb(0 0 0 / 0.4) 0 0),
+      url('https://images.unsplash.com/photo-1751220170218-e57d53bd4aa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTE1NjQ0MjR8&ixlib=rb-4.1.0&q=80&w=1800');
+    background-attachment: fixed;
+
+    /*    border-radius: 10px;
+
+    !*    transition: position-anchor 10000ms; !* takes longer to transit but it will just jump at the 50% mark rather than smooth transition *!
+    transition-behavior: allow-discrete; !* position-anchor is discrete transition *!*!
+
+    position-anchor: --hovered-link;
+    !* !!!! since your position-anchor always on the same name, now you can have transition animation *!
+    !*transition:*!
+    !*  left 300ms,*!
+    !*  right 300ms;*!
+    !*transition: 300ms;*!
+    !* timing function getting from https://easingwizard.com/ -> Spring -> Elastic *!
+    transition: 500ms
+      linear(
+        0,
+        0.029 1.6%,
+        0.123 3.5%,
+        0.651 10.6%,
+        0.862 14.1%,
+        1.002 17.7%,
+        1.046 19.6%,
+        1.074 21.6%,
+        1.087 23.9%,
+        1.086 26.6%,
+        1.014 38.5%,
+        0.994 46.3%,
+        1
+      );*/
   }
 
   /* When the <a> is on hover, we want it to occupy the whole <a> */
